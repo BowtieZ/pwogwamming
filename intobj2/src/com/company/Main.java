@@ -49,7 +49,12 @@ public class Main {
         int getty3 = myList.get(0);
         System.out.println(getty3);
 
-        int gett4 = 
+        int getty4 = myList.get(1);
+        System.out.println(getty4);
+
+        myList.clear();
+
+        int sizzy2 = myList.size();
 
     }
 }
