@@ -4,6 +4,7 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Date;
 
 public class Main {
 
@@ -59,11 +60,11 @@ public class Main {
         Date currentDate = new Date();
         Date anotherDate = new Date();
         
-        string curDateString = currentDate.toString();
+        String curDateString = currentDate.toString();
         System.out.println(curDateString);
         
         anotherDate.setTime(123478);
-        boolean maybe = currentDate.Before(anotherDate);
+        boolean maybe = currentDate.before(anotherDate);
         
         if(maybe == true)
         {
