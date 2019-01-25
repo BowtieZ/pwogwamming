@@ -13,7 +13,7 @@ namespace advobj
             // write your code here
             //most of this assignment is trying to read the existing code to understand how it works,
             //ask a classmate or instructor if you are unsure how the code works.
-           
+
 
             //generate a new player
             //create main game loop that continues until the player has no health
@@ -23,6 +23,17 @@ namespace advobj
             //has the enemy take damage
             //has the player take damage
             //once the player is dead print out the player's level and how much xp they had.
+
+            Player p1 = new Player();
+            //Enemy badboi = new Enemy(1);
+            //int health = p1.getHealth();
+            while (p1.getHealth() > 0) //im not sure if this should be a while loop or not,
+            {
+                Enemy badboi = new Enemy(p1.getPlayerLevel());
+
+                
+
+            }
         }
 
     }
