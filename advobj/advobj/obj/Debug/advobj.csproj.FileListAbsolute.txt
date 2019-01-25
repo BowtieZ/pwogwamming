@@ -1,1 +1,6 @@
 C:\Users\BL2100\Documents\GitHub\pwogwamming\advobj\advobj\obj\Debug\advobj.csprojResolveAssemblyReference.cache
+C:\Users\BL2100\Documents\GitHub\pwogwamming\advobj\advobj\bin\Debug\advobj.exe.config
+C:\Users\BL2100\Documents\GitHub\pwogwamming\advobj\advobj\bin\Debug\advobj.exe
+C:\Users\BL2100\Documents\GitHub\pwogwamming\advobj\advobj\bin\Debug\advobj.pdb
+C:\Users\BL2100\Documents\GitHub\pwogwamming\advobj\advobj\obj\Debug\advobj.exe
+C:\Users\BL2100\Documents\GitHub\pwogwamming\advobj\advobj\obj\Debug\advobj.pdb
