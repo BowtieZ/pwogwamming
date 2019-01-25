@@ -55,6 +55,25 @@ public class Main {
         myList.clear();
 
         int sizzy2 = myList.size();
+        
+        Date currentDate = new Date();
+        Date anotherDate = new Date();
+        
+        string curDateString = currentDate.toString();
+        System.out.println(curDateString);
+        
+        anotherDate.setTime(123478);
+        boolean maybe = currentDate.Before(anotherDate);
+        
+        if(maybe == true)
+        {
+            System.out.println("current date is before another date");
+        }
+        else
+        {
+            System.out.println("current date is after another date");
+        }
+        
 
     }
 }
