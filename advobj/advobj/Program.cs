@@ -33,7 +33,7 @@ namespace advobj
                 if (badboi.getHealth() > 0) //while enemy health is higher than zero
                 {
                     p1.menu(badboi);
-
+                    badboi.takeDamage(p1);
                 }
 
                 
