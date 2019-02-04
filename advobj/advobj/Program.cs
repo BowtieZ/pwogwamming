@@ -30,18 +30,27 @@ namespace advobj
             while (p1.getHealth() > 0) //im not sure if this should be a while loop or not,
             {
                 Enemy badboi = new Enemy(p1.getPlayerLevel()); //generate enemy with level on par to player
-                if (badboi.getHealth() > 0) //while enemy health is higher than zero
+                while (badboi.getHealth() > 0) //while enemy health is higher than zero
                 {
                     p1.menu(badboi);
-                    badboi.takeDamage(p1);
-                }
 
-                
+                     badboi.takeDamage(p1); //this line isnt executed edit: fixed, "if" fucked it up
+                    if (badboi.getHealth() > 0)
+                    {
+                        p1.takeDamage(badboi);
+                    }
+                    //somehow make an "if" for not attacking the player if the enemy is dead lmao.
+                    //Console.ReadKey();
+                    
 
+
+
+                 }
             }
+            Console.WriteLine("a wonderous adventure you had! you were level " + p1.getPlayerLevel());
+            Console.Write(" and you also had " + p1.getXp() + " experience points!");
+
         }
 
     }
-
-   
 }

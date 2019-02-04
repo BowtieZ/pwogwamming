@@ -138,8 +138,8 @@ namespace advobj
             //if they leveled up
             if (xp > (int)(5 * Math.Pow(1.3, playerLevel)))
             {
-                Console.WriteLine("you are now level: " + playerLevel);
                 playerLevel++;
+                Console.WriteLine("you are now level: " + playerLevel);    
                 healthPotions = healthPotions + 5;
                 attack = attack + rand.Next(7) + 1;
                 defense = defense + rand.Next(7) + 1;
