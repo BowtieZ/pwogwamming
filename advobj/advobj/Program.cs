@@ -30,7 +30,7 @@ namespace advobj
             while (p1.getHealth() > 0) //im not sure if this should be a while loop or not,
             {
                 Enemy badboi = new Enemy(p1.getPlayerLevel()); //generate enemy with level on par to player
-                while (badboi.getHealth() > 0) //while enemy health is higher than zero
+                while (badboi.getHealth() > 0 && p1.getHealth() > 0) //while enemy health is higher than zero
                 {
                     p1.menu(badboi);
 
@@ -49,7 +49,7 @@ namespace advobj
             }
             Console.WriteLine("a wonderous adventure you had! you were level " + p1.getPlayerLevel());
             Console.Write(" and you also had " + p1.getXp() + " experience points!");
-
+            Console.ReadKey();
         }
 
     }

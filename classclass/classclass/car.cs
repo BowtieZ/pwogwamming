@@ -25,6 +25,19 @@ namespace classclass
             gasInGallons = tankSize;
             milesPerGallon = 24;
         }
+        public car (String Make, string Model, double TankSize, double mpg)
+        {
+            make = Make;
+            model = Model;
+            tankSize = TankSize;
+            mileage = 0;
+            gasInGallons = TankSize;
+        }
         //methoods
+        public void DriveTilEmpty()
+        {
+            mileage = mileage + milesPerGallon * gasInGallons;
+            gasInGallons = 0; 
+        }
     }
 }

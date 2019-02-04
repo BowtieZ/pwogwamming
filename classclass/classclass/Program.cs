@@ -12,6 +12,9 @@ namespace classclass
         {
             car BakerCar = new car();
             Console.WriteLine("Bakers car =" + BakerCar.model);
+            car PeteCar = new car(Make: "Ford", Model: "Mustang", TankSize: 14, mpg: 13);
+
+            BakerCar.DriveTilEmpty();
         }
     }
 }
