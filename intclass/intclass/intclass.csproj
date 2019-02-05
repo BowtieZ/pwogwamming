@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E10B78E9-3DC9-421E-B2FF-9AAF3EE1C069}</ProjectGuid>
+    <ProjectGuid>{E539AFDC-5CC6-422E-B0E7-AC326A413EF3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>begclass</RootNamespace>
-    <AssemblyName>begclass</AssemblyName>
+    <RootNamespace>intclass</RootNamespace>
+    <AssemblyName>intclass</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animooooooooooooooooooooooooooooooo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
