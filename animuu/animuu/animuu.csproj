@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E539AFDC-5CC6-422E-B0E7-AC326A413EF3}</ProjectGuid>
+    <ProjectGuid>{494EE8C3-D804-456C-B080-F501E82AE1C1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>intclass</RootNamespace>
-    <AssemblyName>intclass</AssemblyName>
+    <RootNamespace>animuu</RootNamespace>
+    <AssemblyName>animuu</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aminal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stnudenent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
