@@ -29,7 +29,7 @@ namespace advobj
             /*int health = p1.getHealth();*/
             while (p1.getHealth() > 0) //im not sure if this should be a while loop or not,
             {
-                Enemy badboi = new Enemy(p1.getPlayerLevel()); //generate enemy with level on par to player
+                Enemy badboi = new Enemy(7); //generate enemy with level on par to player
                 while (badboi.getHealth() > 0 && p1.getHealth() > 0) //while enemy health is higher than zero
                 {
                     p1.menu(badboi);
