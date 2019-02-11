@@ -17,8 +17,8 @@ namespace animuu
         public dog(String Name, bool DockedTail)
         {
             species = "Dog";
-            Name = name;
-            DockedTail = dockedTail;
+            name = Name;
+            dockedTail = DockedTail;
         }
 
         //methoods

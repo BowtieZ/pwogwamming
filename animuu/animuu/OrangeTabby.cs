@@ -16,7 +16,7 @@ namespace animuu
         public OrangeTabby(String Name)
         {
             species = "Cat";
-            Name = name;
+            name = Name;
         }
 
         //methods

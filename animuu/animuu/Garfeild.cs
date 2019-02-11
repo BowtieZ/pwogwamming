@@ -16,7 +16,7 @@ namespace animuu
         public Garfeild(String Name)
         {
             species = "Cat";
-            Name = name;
+            name = Name;
         }
 
         //methods
