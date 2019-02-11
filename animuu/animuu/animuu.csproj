@@ -43,8 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aminal.cs" />
+    <Compile Include="Cat.cs" />
+    <Compile Include="dog.cs" />
+    <Compile Include="Garfeild.cs" />
+    <Compile Include="OrangeTabby.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RussianBlue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
