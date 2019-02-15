@@ -16,7 +16,7 @@ namespace animuu
         public Cat(String Name)
         {
             species = "Cat";
-            Name = name;
+            name = Name;
         }
 
         //methods
