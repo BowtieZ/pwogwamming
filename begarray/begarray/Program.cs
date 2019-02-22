@@ -48,6 +48,8 @@ namespace begarray
 
             //reading values
 
+            Console.WriteLine(numbersArray[0]);
+            Console.ReadKey();
         }
     }
 }
