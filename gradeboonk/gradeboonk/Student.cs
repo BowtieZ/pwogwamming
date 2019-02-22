@@ -18,7 +18,7 @@ namespace gradeboonk
         string Username;
 
         //Constructor 
-        public Student(string firstName, string lastName, string username, long phoneNumber) //try to make boolean?
+        public Student(string firstName, string lastName, string username, long phoneNumber) //try to make boolean?//dont, you cant.
         {
             FirstName = firstName;
             LastName = lastName;
@@ -31,22 +31,22 @@ namespace gradeboonk
 
         //methoods
         
-        Public void markTardy( string username )
+        public void markTardy( string username )
         {
             TardyCount++;
         } 
         
-        Public void markAbsent( string username )
+        public void markAbsent( string username )
         {
             AbsentCount++;
         }
         
-        Public int getTardyCount(string username)
+        public int getTardyCount(string username)
         {
             return TardyCount;
         }
         
-        Public int getAbsentCount(string username)
+        public int getAbsentCount(string username)
         {
             return AbsentCount;
         }
