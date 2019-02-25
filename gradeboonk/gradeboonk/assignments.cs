@@ -14,6 +14,14 @@ namespace gradeboonk
         double PtsEarned;
 
         //constructor
+        public assignments (string name, double ptspossible, double ptsearned)
+        {
+            Name = name;
+            PtsEarned = ptsearned;
+            PtsPossible = ptspossible;
+
+
+        }
         //methoods
     }
 }
