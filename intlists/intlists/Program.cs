@@ -16,7 +16,7 @@ namespace intlists
             List<int> listOfInts = new List<int>();
             List<int> testScores = new List<int>();
 
-            List<double> dbLIst = new List<double>();
+            List<double> dbList = new List<double>();
             List<double> listOfDoubles = new List<double>();
             List<double> playerPoints = new List<double>();
 
@@ -47,6 +47,15 @@ namespace intlists
             Console.WriteLine(IntElement = intList[1]);
             Console.WriteLine(IntElement = intList[2]);
             Console.WriteLine(IntElement = intList[3]);
+
+            //change to dblList
+            dblList.Add(12.1);
+
+            double dblElement;
+            Console.WriteLine(dblElement = dblList[0]);
+
+            dblList[0] = 13.1;
+            Console.WriteLine(dblElement = dblList[0]);
         }
     }
 }
