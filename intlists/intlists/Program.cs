@@ -27,6 +27,19 @@ namespace intlists
             List<int> intList = new List<int>();
             List<double> dblList = new List<double>();
             List<string> strList = new List<string>();
+
+            //change intList
+            intList.Add(12);
+            intList.Add(5);
+            intList.Add(7);
+            intList.Add(3);
+
+            int IntElement = intList[0];
+            Console.WriteLine(IntElement);
+            Console.WriteLine(IntElement = intList[1]);
+            Console.WriteLine(IntElement = intList[2]);
+            Console.WriteLine(IntElement = intList[3]);
+
         }
     }
 }
