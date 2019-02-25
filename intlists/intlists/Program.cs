@@ -40,6 +40,13 @@ namespace intlists
             Console.WriteLine(IntElement = intList[2]);
             Console.WriteLine(IntElement = intList[3]);
 
+            intList[0] = 13;
+            intList[3] = 8;
+
+            Console.WriteLine(IntElement = intList[0]);
+            Console.WriteLine(IntElement = intList[1]);
+            Console.WriteLine(IntElement = intList[2]);
+            Console.WriteLine(IntElement = intList[3]);
         }
     }
 }
