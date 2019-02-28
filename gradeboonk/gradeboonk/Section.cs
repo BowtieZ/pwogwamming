@@ -11,7 +11,8 @@ namespace gradeboonk
         //properties -> actually probably not needed
         int ID;
 
-        //array 
+        //list of assignments
+        //list/array of studetns
        
        
     }

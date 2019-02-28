@@ -51,5 +51,6 @@ namespace gradeboonk
             return AbsentCount;
         }
 
+        //a list/array for assignments goes around here
     }
 }
