@@ -47,14 +47,29 @@ namespace advarray
             
             Console.ReadKey();
             */
-            string[] Username = new string[50];
-            string[] Password = new string[50];
+            List<string> Username = new List<string>();
+            List<string> Password = new List<string>();
 
             Console.WriteLine("Would you like to create an account or login?");
             string Response = Console.ReadLine();
             if( Response == "create account" || Response == "create" || Response == "Create Account" || Response == "Create account" )
             {
-
+                Console.WriteLine("Please Create a Username.");
+                string user = Console.ReadLine();
+                for (int i = 0; i < Username.Count; i++)
+                {
+                    if (Username[i].Equals(user))
+                    {
+                        //Avalibility = true;
+                        Console.WriteLine("username unavailible");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("username availible");
+                        Username.Add(user);
+                    }
+                }
             }
         }
     }
