@@ -69,7 +69,7 @@ namespace advarray
                     {
                         if (Username[i].Equals(user))
                         {
-                            //Avalibility = true;
+                            
                             Console.WriteLine("username unavailible");
                             break;
                         }
@@ -87,7 +87,7 @@ namespace advarray
                     {
                         if (Password[i].Equals(pass))
                         {
-                            //Avalibility = true;
+                            
                             Console.WriteLine("Password unavailible");
                             break;
                         }
@@ -109,7 +109,7 @@ namespace advarray
                     {
                         if (Username[i].Equals(user))
                         {
-                            //Avalibility = true;
+                            
                             Console.WriteLine("username not found, try again.");
                             break;
                         }
@@ -121,7 +121,7 @@ namespace advarray
                             {
                                 if (Password[i].Equals(Username))
                                 {
-                                    //Avalibility = true;
+                                    
                                     Console.WriteLine("Password not found, try again.");
                                     break;
                                 }
