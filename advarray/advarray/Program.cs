@@ -49,6 +49,8 @@ namespace advarray
             */
             List<string> Username = new List<string>();
             List<string> Password = new List<string>();
+            Username.Add("null");
+            Password.Add("null");
 
             Console.WriteLine("Would you like to create an account or login?");
             string Response = Console.ReadLine();
@@ -107,7 +109,7 @@ namespace advarray
                     {
                         Console.WriteLine("Thanks! enter password.");
                         string pass = Console.ReadLine();
-                        for (int i = 0; i < Password.Count; i++)
+                        for (int a = 0; a < Password.Count; a++)
                         {
                             if (Password[i].Equals(Username))
                             {
