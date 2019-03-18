@@ -51,77 +51,89 @@ namespace advarray
             List<string> Password = new List<string>();
             Username.Add("null");
             Password.Add("null");
+            bool Activity = true;
 
-            Console.WriteLine("Would you like to create an account or login?");
+            while (Activity == true)
+            {
+                Console.WriteLine("Would you like to create an account or login?");
             string Response = Console.ReadLine();
             //if loop for creating account
-            if( Response == "create account" || Response == "create" || Response == "Create Account" || Response == "Create account" )
-            {
-                //create password
-                Console.WriteLine("Please Create a Username.");
-                string user = Console.ReadLine();
-                for (int i = 0; i < Username.Count; i++)
+            
+                if (Response == "create account" || Response == "create" || Response == "Create Account" || Response == "Create account")
                 {
-                    if (Username[i].Equals(user))
+                    //create password
+                    Console.WriteLine("Please Create a Username.");
+                    string user = Console.ReadLine();
+                    //will print both ava & unava
+                    for (int i = 0; i < Username.Count; i++)
                     {
-                        //Avalibility = true;
-                        Console.WriteLine("username unavailible");
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("username availible");
-                        Username.Add(user);
-                    }
-                }
-                //create password
-                Console.WriteLine("Please Create a Password.");
-                string pass = Console.ReadLine();
-                for (int i = 0; i < Password.Count; i++)
-                {
-                    if (Password[i].Equals(Username))
-                    {
-                        //Avalibility = true;
-                        Console.WriteLine("Password unavailible");
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Password availible");
-                        Password.Add(pass);
-                    }
-                }
-            }
-            //else if loop for logging in
-            else if (Response == "Login" || Response == "login")
-            {
-                Console.WriteLine("Please Enter your Username");
-                string user = Console.ReadLine();
-                for (int i = 0; i < Username.Count; i++)
-                {
-                    if (Username[i].Equals(user))
-                    {
-                        //Avalibility = true;
-                        Console.WriteLine("username not found, try again.");
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Thanks! enter password.");
-                        string pass = Console.ReadLine();
-                        for (int a = 0; a < Password.Count; a++)
+                        if (Username[i].Equals(user))
                         {
-                            if (Password[i].Equals(Username))
+                            //Avalibility = true;
+                            Console.WriteLine("username unavailible");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("username availible");
+                            Username.Add(user);
+                            break;
+                        }
+                    }
+                    //create password
+                    Console.WriteLine("Please Create a Password.");
+                    string pass = Console.ReadLine();
+                    for (int i = 0; i < Password.Count; i++)
+                    {
+                        if (Password[i].Equals(pass))
+                        {
+                            //Avalibility = true;
+                            Console.WriteLine("Password unavailible");
+                            break;
+                        }
+                        else
+                        {
+                            //prints pass ava infinitely?
+                            Console.WriteLine("Password availible");
+                            Password.Add(pass);
+                            break;
+                        }
+                    }
+                }
+                //else if loop for logging in
+                else if (Response == "Login" || Response == "login")
+                {
+                    Console.WriteLine("Please Enter your Username");
+                    string user = Console.ReadLine();
+                    for (int i = 0; i < Username.Count; i++)
+                    {
+                        if (Username[i].Equals(user))
+                        {
+                            //Avalibility = true;
+                            Console.WriteLine("username not found, try again.");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Thanks! enter password.");
+                            string pass = Console.ReadLine();
+                            for (int a = 0; a < Password.Count; a++)
                             {
-                                //Avalibility = true;
-                                Console.WriteLine("Password not found, try again.");
-                                break;
-                            }
-                            else
-                            {
-                                Console.WriteLine("Login successful! welcome," + user);
+                                if (Password[i].Equals(Username))
+                                {
+                                    //Avalibility = true;
+                                    Console.WriteLine("Password not found, try again.");
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Login successful! welcome," + user);
+                                    Activity = false;
+                                    break;
+                                }
                             }
                         }
+                        break;
                     }
                 }
             }
