@@ -47,8 +47,15 @@ namespace advarray
             
             Console.ReadKey();
             */
+            string[] Username = new string[50];
+            string[] Password = new string[50];
 
+            Console.WriteLine("Would you like to create an account or login?");
+            string Response = Console.ReadLine();
+            if( Response == "create account" || Response == "create" || Response == "Create Account" || Response == "Create account" )
+            {
 
+            }
         }
     }
 }
