@@ -52,6 +52,7 @@ namespace advarray
 
             Console.WriteLine("Would you like to create an account or login?");
             string Response = Console.ReadLine();
+            //if loop for creating account
             if( Response == "create account" || Response == "create" || Response == "Create Account" || Response == "Create account" )
             {
                 //create password
@@ -85,6 +86,40 @@ namespace advarray
                     else
                     {
                         Console.WriteLine("Password availible");
+                        Password.Add(pass);
+                    }
+                }
+            }
+            //else if loop for logging in
+            else if (Response == "Login" || Response == "login")
+            {
+                Console.WriteLine("Please Enter your Username");
+                string user = Console.ReadLine();
+                for (int i = 0; i < Username.Count; i++)
+                {
+                    if (Username[i].Equals(user))
+                    {
+                        //Avalibility = true;
+                        Console.WriteLine("username not found, try again.");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Thanks! enter password.");
+                        string pass = Console.ReadLine();
+                        for (int i = 0; i < Password.Count; i++)
+                        {
+                            if (Password[i].Equals(Username))
+                            {
+                                //Avalibility = true;
+                                Console.WriteLine("Password not found, try again.");
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Login successful!");
+                            }
+                        }
                     }
                 }
             }
