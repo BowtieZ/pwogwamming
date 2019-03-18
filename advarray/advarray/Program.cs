@@ -54,6 +54,7 @@ namespace advarray
             string Response = Console.ReadLine();
             if( Response == "create account" || Response == "create" || Response == "Create Account" || Response == "Create account" )
             {
+                //create password
                 Console.WriteLine("Please Create a Username.");
                 string user = Console.ReadLine();
                 for (int i = 0; i < Username.Count; i++)
@@ -68,6 +69,22 @@ namespace advarray
                     {
                         Console.WriteLine("username availible");
                         Username.Add(user);
+                    }
+                }
+                //create password
+                Console.WriteLine("Please Create a Password.");
+                string pass = Console.ReadLine();
+                for (int i = 0; i < Password.Count; i++)
+                {
+                    if (Password[i].Equals(Username))
+                    {
+                        //Avalibility = true;
+                        Console.WriteLine("Password unavailible");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Password availible");
                     }
                 }
             }
