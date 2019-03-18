@@ -100,7 +100,7 @@ namespace advarray
                         }
                     }
                 }
-                //else if loop for logging in
+                //else if loop for logging in -> will let users log in no matter what
                 else if (Response == "Login" || Response == "login")
                 {
                     Console.WriteLine("Please Enter your Username");
