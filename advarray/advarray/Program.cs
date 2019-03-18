@@ -117,12 +117,13 @@ namespace advarray
                             }
                             else
                             {
-                                Console.WriteLine("Login successful!");
+                                Console.WriteLine("Login successful! welcome," + user);
                             }
                         }
                     }
                 }
             }
+            Console.ReadKey();
         }
     }
 }
