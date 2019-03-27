@@ -9,13 +9,13 @@ namespace gradeboonk
     class Student
     {
         //parameters
-        string FirstName;
-        string LastName;
-        int TardyCount;
-        int AbsentCount;
-        double OverallScore;
-        long PhoneNumber;
-        string Username;
+       private string FirstName;
+       private string LastName;
+       private int TardyCount;
+       private int AbsentCount;
+       private double OverallScore;
+       private long PhoneNumber;
+       private string Username;
 
         //Constructor 
         public Student(string firstName, string lastName, string username, long phoneNumber) //try to make boolean?//dont, you cant.

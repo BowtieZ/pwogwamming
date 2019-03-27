@@ -9,9 +9,9 @@ namespace gradeboonk
     class assignments
     {
         //properties
-        string Name;
-        double PtsPossible;
-        double PtsEarned;
+       private string Name;
+       private double PtsPossible;
+       private double PtsEarned;
 
         //constructor
         public assignments (string name, double ptspossible, double ptsearned)

@@ -9,7 +9,7 @@ namespace gradeboonk
     class Section
     {
         //properties -> actually probably not needed
-        int ID;
+       private int ID;
 
         //list of assignments
         //list/array of studetns
