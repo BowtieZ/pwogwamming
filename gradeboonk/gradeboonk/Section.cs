@@ -9,11 +9,16 @@ namespace gradeboonk
     class Section
     {
         //properties -> actually probably not needed
-       private int ID;
-
-        //list of assignments
+       private string sectionName;
         //list/array of studetns
+        List<Student> Students;
        
+        //cosntructor
+        public Section(string SectionName )
+        {
+            sectionName = SectionName;
+            Students = new List<Student>();
+        }
        
     }
 }

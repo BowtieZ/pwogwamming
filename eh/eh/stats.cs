@@ -15,7 +15,9 @@ namespace eh
         int hydrogen;
         int helium;
         double carbon;
-        int oxygen;
+        int silicon;
+        int iron;
+        int sisterStar;
         int star;
         int planet;
         int redGiant;
@@ -30,7 +32,7 @@ namespace eh
             hydrogen = 0;
             helium = 0;
             carbon = 0;
-            oxygen = 0;
+            silicon = 0;
             star = 0;
             planet = 0;
             redGiant = 0;
@@ -108,6 +110,13 @@ namespace eh
         {
             return helium;
         }
+        //iron, 10 atoms = 1 
+        public void Iron()
+        {
+            Console.WriteLine("the atoms are heading up! wow, that's really shiny.");
+            atoms = atoms - 10;
+            iron++;
+        }
         //make stars, for every star created there should be +.5 quarks ,+1 helium , +.05 carbon every second
         public void Star()
         {
@@ -137,6 +146,7 @@ namespace eh
             while( star > 0)
             {
                 helium++;
+                atoms = atoms + 10;
                 carbon = carbon + 0.05;
                 quarks = quarks + 0.5;
                 System.Threading.Thread.Sleep(1000);
@@ -146,6 +156,9 @@ namespace eh
                 Console.WriteLine("quarks " + quarks); */
             }
         }
+    }
+}
+ //dont even fuck with this anymore, multithreading works and is much easier
         //suppose to be a delegate + event for adding materials according to how many stars are owned
         /*public int starAddedResources(int a)
         {
@@ -157,5 +170,3 @@ namespace eh
             }
             return star;
         } */
-    }
-}

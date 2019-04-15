@@ -14,6 +14,7 @@ namespace eh
             bool open = true;
             stats NewGame = new stats();
             Console.WriteLine("Hi and welcome to the Andromeda Idle! here are your current earnings and belongings." );
+            NewGame.Resources();
             Console.WriteLine("everytime you open the game, you start over. type commands to get quarks and eventually create your universe.");
             while (open == true)
             {
@@ -48,13 +49,13 @@ namespace eh
                         Console.WriteLine("--------------------");
                         Console.WriteLine("you now have " + NewGame.getStar() + " stars!");
                         Console.WriteLine("Now that you have stars, the aquisition of materials should be atleast a little easier. good luck!");
-                        //somehow figure out how to use delegates.
+                        //somehow figure out how to use delegates. edit: do not. 
                         //NewGame.starResourceCounter();
                         //edit: actually lets try multithreading it
                         var ts = new ThreadStart(NewGame.starResourceCounter);
                         var backgroundThread = new Thread(ts);
                         backgroundThread.Start();
-                        //threading it actually works!!! stop making it print though, that's confusing. 
+                        //threading it actually works!!! stop making it print though, that's confusing. edit: it doesnt print AND it can duplicate now, this is fantastic
                         break;
                     case "create planet":
                         break;

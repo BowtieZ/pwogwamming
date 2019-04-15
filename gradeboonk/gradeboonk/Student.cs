@@ -16,6 +16,8 @@ namespace gradeboonk
        private double OverallScore;
        private long PhoneNumber;
        private string Username;
+        //list of assignments
+        List<assignments> assignments;
 
         //Constructor 
         public Student(string firstName, string lastName, string username, long phoneNumber) //try to make boolean?//dont, you cant.
@@ -26,6 +28,7 @@ namespace gradeboonk
             AbsentCount = 0;
             PhoneNumber = phoneNumber;
             Username = username;
+            assignments = new List<assignments>();
             
         }
 
