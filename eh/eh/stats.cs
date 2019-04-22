@@ -176,10 +176,12 @@ namespace eh
             }
 
         }
+        //planet getter
         public int getPlanet()
         {
             return planet;
         }
+        //dwarf planet getter
         public int getDwarfPlanet()
         {
             return dwarfPlanet;

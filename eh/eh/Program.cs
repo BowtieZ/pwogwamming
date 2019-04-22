@@ -60,18 +60,24 @@ namespace eh
                     case "create planet":
                         NewGame.Planet();
                         Console.WriteLine("--------------------");
-                        if (getDwarfPlanet == 0)
+                        if (NewGame.getDwarfPlanet() == 0)
                         {
-
+                            Console.WriteLine("you now have " + NewGame.getPlanet() + " planets!");
+                            Console.WriteLine("you'll get oxygen from the planets, though i wonder why rocks keep calling off...");
+                            //running a thread for oxygen
+                            var pot = new ThreadStart(NewGame.planetOxy);
+                            var planetoxyThread = new Thread(pot);
+                            planetoxyThread.Start();
+                            //running a thread for moons
+                            var pmt = new ThreadStart(NewGame.planetMoon);
+                            var planetMoonThread = new Thread(pmt);
+                            planetMoonThread.Start();
                         }
-                        //running a thread for oxygen
-                        var pot = new ThreadStart(NewGame.planetOxy);
-                        var planetoxyThread = new Thread(pot);
-                        planetoxyThread.Start();
-                        //running a thread for moons
-                        var pmt = new ThreadStart(NewGame.planetMoon);
-                        var planetMoonThread = new Thread(pmt);
-                        planetMoonThread.Start();
+                        else if (NewGame.getDwarfPlanet() > 0)
+                        {
+                            Console.WriteLine("you now have" + NewGame.getDwarfPlanet() + " dwarf planets! take good care of them.");
+                        }
+                       
                         break;
                     case "create sister stars":
                         break;
