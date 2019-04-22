@@ -52,17 +52,44 @@ namespace eh
                         //somehow figure out how to use delegates. edit: do not. 
                         //NewGame.starResourceCounter();
                         //edit: actually lets try multithreading it
-                        var ts = new ThreadStart(NewGame.starResourceCounter);
-                        var backgroundThread = new Thread(ts);
-                        backgroundThread.Start();
+                        var st = new ThreadStart(NewGame.starResourceCounter);
+                        var starThread = new Thread(st);
+                        starThread.Start();
                         //threading it actually works!!! stop making it print though, that's confusing. edit: it doesnt print AND it can duplicate now, this is fantastic
                         break;
                     case "create planet":
+                        NewGame.Planet();
+                        Console.WriteLine("--------------------");
+                        if (getDwarfPlanet == 0)
+                        {
+
+                        }
+                        //running a thread for oxygen
+                        var pot = new ThreadStart(NewGame.planetOxy);
+                        var planetoxyThread = new Thread(pot);
+                        planetoxyThread.Start();
+                        //running a thread for moons
+                        var pmt = new ThreadStart(NewGame.planetMoon);
+                        var planetMoonThread = new Thread(pmt);
+                        planetMoonThread.Start();
                         break;
                     case "create sister stars":
                         break;
                     case "create moon":
                         break;
+                        //delete this or make it dead later, only meant for testing purposes
+                    /*case "test 50 stars":
+                        //the program seems to crash at about 1300-1500 stars? hm...try to cap it at like 1000 stars. 
+                        NewGame.Testing(); //i did this wrong lmao//fixed it
+                        int i = 0;
+                        while ( i < 51)
+                        {
+                            var tst = new ThreadStart(NewGame.starResourceCounter);
+                            var backgroundThreadt = new Thread(tst);
+                            backgroundThreadt.Start();
+                            i++;
+                        }
+                        break; */ //comment this back in when you need to test something
                 }
                 Console.WriteLine("what would you like to do now?");
                 

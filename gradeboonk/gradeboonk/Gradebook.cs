@@ -49,15 +49,26 @@ namespace gradeboonk
             //create student
             //adds to the current section
             //should fail if any feild is missing
-            new Student(addStudent); //doesnt work and idk how to make it work, suppose to create a new student
-            ClassHours.Add(); //idk how to make this work either, suppose to add it to current section
-            return false; //FIXME
+            //if/else so that it can return either true or false
+            if (true)
+            {
+                new Student(addStudent); //doesnt work and idk how to make it work, suppose to create a new student
+                ClassHours.Add(); //idk how to make this work either, suppose to add it to current section
+                return true;
+            }
+            else
+            {
+                return false; //FIXME
+            }
         }
 
         //returns overall score (total points earned for all assignments/ total points possible) as a percentage for specified student
         //returns -1 if the student was not found or if the student did not have any assignments assigned or there are no sections.
         public double getOverallScore(string username)
         {
+            //should return -1 if student name not specified
+            //score = pts earned/pts possible, take number & convert to decimal
+            //return score
             return -1; //FIXME
         }
         //returns overall score as a percentage for the current section - (the average of each students overall score.)
@@ -67,6 +78,7 @@ namespace gradeboonk
         //returns -1 if there were no assignments in the section or there are no sections.
         public double getOverallScoreAvg()
         {
+
             return -1; //FIXME
         }
 
