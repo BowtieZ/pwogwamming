@@ -186,6 +186,20 @@ namespace eh
         {
             return dwarfPlanet;
         }
+        //take two stars and make them into sister stars! this way, one can become a red giant -> a nebula  -> white dwarf -> black dwarf
+        public void sisterStars()
+        {
+            if ( star >= 2)
+            {
+                Console.WriteLine("oh hey these stars are spinning around eachother!");
+                star = star - 2;
+                sisterStar++;
+            }
+            else
+            {
+                Console.WriteLine("hey it takes two to tango! if you only have one star i cant make a sister system. mind you, i also cant make it out of nothing!");
+            }
+        }
         public void Resources()
         {
             Console.WriteLine(quarks + " quarks");
@@ -235,7 +249,7 @@ namespace eh
         //follwing methoods are for testing purposes only, not to remain in Main
         public void Testing()
         {
-            star = star + 50;
+            planet = planet + 50;
         }
     }
 }

@@ -15,7 +15,19 @@ namespace eh
             stats NewGame = new stats();
             Console.WriteLine("Hi and welcome to the Andromeda Idle! here are your current earnings and belongings." );
             NewGame.Resources();
+            System.Threading.Thread.Sleep(1000);
             Console.WriteLine("everytime you open the game, you start over. type commands to get quarks and eventually create your universe.");
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("--------------------");
+            Console.WriteLine("your currently availible commands are as follows:");
+            Console.WriteLine("the 'show resources' command will show your currently availible resources.");
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("--------------------");
+            Console.WriteLine("the 'get quarks' command will get you quarks! quarks are absolutely free and are the building blocks of the universe, collect many to make atoms!");
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("--------------------");  
+            Console.WriteLine("the 'make atoms' command will create atoms out of quarks! it takes 3 quarks to make an atom, and atoms are used to make elements!");
+            Console.WriteLine("please enter a command.");
             while (open == true)
             {
                 string action = Console.ReadLine();
@@ -33,6 +45,7 @@ namespace eh
                         NewGame.Atoms();
                         Console.WriteLine("--------------------");
                         Console.WriteLine("you now have " + NewGame.getAtoms() + " atoms!");
+                        Console.WriteLine("you've earned new commands! It takes two atoms to make either Helium or Hydrogen using the 'create helium' or 'create hydrogen' commands.");
                         break;
                     case "create hydrogen":
                         NewGame.Hydrogen();
@@ -44,6 +57,7 @@ namespace eh
                         Console.WriteLine("--------------------");
                         Console.WriteLine("you now have " + NewGame.getHelium() + " helium");
                         break;
+                    //cap stars at 800
                     case "create star":
                         NewGame.Star();
                         Console.WriteLine("--------------------");
@@ -57,45 +71,50 @@ namespace eh
                         starThread.Start();
                         //threading it actually works!!! stop making it print though, that's confusing. edit: it doesnt print AND it can duplicate now, this is fantastic
                         break;
+                     //cap planets at like 800
                     case "create planet":
-                        NewGame.Planet();
-                        Console.WriteLine("--------------------");
-                        if (NewGame.getDwarfPlanet() == 0)
+                        while (NewGame.getPlanet() < 801)
                         {
-                            Console.WriteLine("you now have " + NewGame.getPlanet() + " planets!");
-                            Console.WriteLine("you'll get oxygen from the planets, though i wonder why rocks keep calling off...");
-                            //running a thread for oxygen
-                            var pot = new ThreadStart(NewGame.planetOxy);
-                            var planetoxyThread = new Thread(pot);
-                            planetoxyThread.Start();
-                            //running a thread for moons
-                            var pmt = new ThreadStart(NewGame.planetMoon);
-                            var planetMoonThread = new Thread(pmt);
-                            planetMoonThread.Start();
+                            NewGame.Planet();
+                            Console.WriteLine("--------------------");
+                            if (NewGame.getDwarfPlanet() == 0)
+                            {
+                                Console.WriteLine("you now have " + NewGame.getPlanet() + " planets!");
+                                Console.WriteLine("you'll get oxygen from the planets, though i wonder why rocks keep calling off...");
+
+                                //running a thread for oxygen
+                                var pot = new ThreadStart(NewGame.planetOxy);
+                                var planetoxyThread = new Thread(pot);
+                                planetoxyThread.Start();
+
+                                //running a thread for moons
+                                var pmt = new ThreadStart(NewGame.planetMoon);
+                                var planetMoonThread = new Thread(pmt);
+                                planetMoonThread.Start();
+                            }
+                            else if (NewGame.getDwarfPlanet() > 0)
+                            {
+                                Console.WriteLine("you now have" + NewGame.getDwarfPlanet() + " dwarf planets! take good care of them, and remember, keep our secret.");
+                            }
                         }
-                        else if (NewGame.getDwarfPlanet() > 0)
-                        {
-                            Console.WriteLine("you now have" + NewGame.getDwarfPlanet() + " dwarf planets! take good care of them.");
-                        }
-                       
                         break;
                     case "create sister stars":
                         break;
                     case "create moon":
                         break;
                         //delete this or make it dead later, only meant for testing purposes
-                    /*case "test 50 stars":
+                    case "test 50 stars":
                         //the program seems to crash at about 1300-1500 stars? hm...try to cap it at like 1000 stars. 
                         NewGame.Testing(); //i did this wrong lmao//fixed it
                         int i = 0;
                         while ( i < 51)
                         {
-                            var tst = new ThreadStart(NewGame.starResourceCounter);
+                            var tst = new ThreadStart(NewGame.planetOxy);
                             var backgroundThreadt = new Thread(tst);
                             backgroundThreadt.Start();
                             i++;
                         }
-                        break; */ //comment this back in when you need to test something
+                        break;  //comment this back in when you need to test something
                 }
                 Console.WriteLine("what would you like to do now?");
                 
