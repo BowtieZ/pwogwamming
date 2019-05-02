@@ -59,17 +59,21 @@ namespace eh
                         break;
                     //cap stars at 800
                     case "create star":
-                        NewGame.Star();
-                        Console.WriteLine("--------------------");
-                        Console.WriteLine("you now have " + NewGame.getStar() + " stars!");
-                        Console.WriteLine("Now that you have stars, the aquisition of materials should be atleast a little easier. good luck!");
-                        //somehow figure out how to use delegates. edit: do not. 
-                        //NewGame.starResourceCounter();
-                        //edit: actually lets try multithreading it
-                        var st = new ThreadStart(NewGame.starResourceCounter);
-                        var starThread = new Thread(st);
-                        starThread.Start();
-                        //threading it actually works!!! stop making it print though, that's confusing. edit: it doesnt print AND it can duplicate now, this is fantastic
+                        while (NewGame.getStar() < 801)
+                        {
+                            NewGame.Star();
+                            Console.WriteLine("--------------------");
+                            Console.WriteLine("you now have " + NewGame.getStar() + " stars!");
+                            Console.WriteLine("Now that you have stars, the aquisition of materials should be atleast a little easier. good luck!");
+                            //somehow figure out how to use delegates. edit: do not. 
+                            //NewGame.starResourceCounter();
+                            //edit: actually lets try multithreading it
+                            var st = new ThreadStart(NewGame.starResourceCounter);
+                            var starThread = new Thread(st);
+                            starThread.Start();
+                            //threading it actually works!!! stop making it print though, that's confusing. edit: it doesnt print AND it can duplicate now, this is fantastic
+                        }
+                        Console.WriteLine("is light pollution a thing in space? no? you're trying to make it a thing, calm down.");
                         break;
                      //cap planets at like 800
                     case "create planet":
@@ -97,6 +101,7 @@ namespace eh
                                 Console.WriteLine("you now have" + NewGame.getDwarfPlanet() + " dwarf planets! take good care of them, and remember, keep our secret.");
                             }
                         }
+                        Console.WriteLine("you have too many! calm down.");
                         break;
                     case "create sister stars":
                         break;

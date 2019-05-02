@@ -200,6 +200,11 @@ namespace eh
                 Console.WriteLine("hey it takes two to tango! if you only have one star i cant make a sister system. mind you, i also cant make it out of nothing!");
             }
         }
+        // # sister star getter
+        public int getSisterStars()
+        {
+            return sisterStar;
+        }
         public void Resources()
         {
             Console.WriteLine(quarks + " quarks");
@@ -207,11 +212,13 @@ namespace eh
             Console.WriteLine(hydrogen + " hydrogen");
             Console.WriteLine(helium + " helium");
             Console.WriteLine(carbon + " carbon");
-            Console.WriteLine(star + " stars");
             Console.WriteLine(silicon + " silicon");
             Console.WriteLine(iron + " iron");
             Console.WriteLine(oxygen + " oxygen");
-            Console.WriteLine(planet + " planet");
+            Console.WriteLine(star + " stars");
+            Console.WriteLine(sisterStar + " sister stars");
+            Console.WriteLine(planet + " planets");
+            Console.WriteLine(moon + " moons ");
         }
         //counter for moons produced by planets
         public void planetMoon()
