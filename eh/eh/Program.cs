@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Threading;
+
 using System.Threading.Tasks;
 
 namespace eh
@@ -11,9 +13,16 @@ namespace eh
     {
         static void Main(string[] args)
         {
+            var Game = new Form();
+            Game = yourGame();
+            Application.Run(Game);
+        }
+          static Form yourGame()
+        {
+
             bool open = true;
             stats NewGame = new stats();
-            Console.WriteLine("Hi and welcome to the Andromeda Idle! here are your current earnings and belongings." );
+            Console.WriteLine("Hi and welcome to the Andromeda Idle! here are your current earnings and belongings.");
             NewGame.Resources();
             System.Threading.Thread.Sleep(1000);
             Console.WriteLine("everytime you open the game, you start over. type commands to get quarks and eventually create your universe.");
@@ -25,7 +34,7 @@ namespace eh
             Console.WriteLine("--------------------");
             Console.WriteLine("the 'get quarks' command will get you quarks! quarks are absolutely free and are the building blocks of the universe, collect many to make atoms!");
             System.Threading.Thread.Sleep(1000);
-            Console.WriteLine("--------------------");  
+            Console.WriteLine("--------------------");
             Console.WriteLine("the 'make atoms' command will create atoms out of quarks! it takes 3 quarks to make an atom, and atoms are used to make elements!");
             Console.WriteLine("please enter a command.");
             while (open == true)
@@ -75,7 +84,7 @@ namespace eh
                         }
                         Console.WriteLine("is light pollution a thing in space? no? you're trying to make it a thing, calm down.");
                         break;
-                     //cap planets at like 800
+                    //cap planets at like 800
                     case "create planet":
                         while (NewGame.getPlanet() < 801)
                         {
@@ -107,12 +116,12 @@ namespace eh
                         break;
                     case "create moon":
                         break;
-                        //delete this or make it dead later, only meant for testing purposes
+                    //delete this or make it dead later, only meant for testing purposes
                     case "test 50 stars":
                         //the program seems to crash at about 1300-1500 stars? hm...try to cap it at like 1000 stars. 
                         NewGame.Testing(); //i did this wrong lmao//fixed it
                         int i = 0;
-                        while ( i < 51)
+                        while (i < 51)
                         {
                             var tst = new ThreadStart(NewGame.planetOxy);
                             var backgroundThreadt = new Thread(tst);
@@ -122,8 +131,10 @@ namespace eh
                         break;  //comment this back in when you need to test something
                 }
                 Console.WriteLine("what would you like to do now?");
-                
+
             }
+            return yourGame();
         }
+     }
     }
-}
+    
